@@ -33,7 +33,7 @@ int main()
     std::cout << "red_light : " << red_light << std::endl;
     std::cout << "green_light : " << green_light << std::endl;
 
-    std::cout << std::boolalpha;
+    std::cout << std::boolalpha; // Allows us to print "true" or "false" to terminal
     std::cout << "red_light : " << red_light << std::endl;
     std::cout << "green_light : " << green_light << std::endl;
 
