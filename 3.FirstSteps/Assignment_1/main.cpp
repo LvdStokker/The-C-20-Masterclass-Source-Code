@@ -1,3 +1,4 @@
+// Assignment 1 - The program wants to know where you live
 #include <iostream>
 #include <string>
 
