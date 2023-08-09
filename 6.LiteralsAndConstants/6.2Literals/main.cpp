@@ -2,8 +2,39 @@
 
 int main()
 {
+    // Luke
+    // Benefits of Using Literals in C++:
+    // - Readability: Clear representation of fixed values.
+    // - Efficiency: Potential compiler optimizations with constant values.
+    // - Type Safety: Specific types with user-defined literals.
+    // - Convenience: Easy expression of constant values.
+    // - Immutability: Prevention of accidental modifications.
+    // - Expressiveness: Custom literals for domain-specific needs.
+    // - Maintainability: Avoidance of "magic numbers" with named constants or user-defined literals.
+
+    // Literals vs Variables in C++:
+    // - Literals are fixed, constant values written directly in the code, such as 42, 3.14, 'A', or "Hello, World!".
+    // - Variables are named storage locations that can hold and change values, such as int age = 42 or double pi
+    // = 3.14.
+
+    // C++ Literals with Prefixes and Suffixes:
+    // - Integer Literals:
+    //   Suffixes: u/U (unsigned), l/L (long), ll/LL (long long), e.g., 42u, 42L, 42LL.
+    //   Prefixes: 0x/0X (hexadecimal), 0 (octal), 0b/0B (binary), e.g., 0x42, 042, 0b101010.
+    // - Floating-Point Literals:
+    //   Suffixes: f/F (float), l/L (long double), e.g., 42.0f, 42.0L.
+    // - Character Literals:
+    //   Prefixes: u (UTF-16), U (UTF-32), L (wide character), e.g., u'A', U'A', L'A'.
+    // - String Literals:
+    //   Prefixes: u8 (UTF-8), u (UTF-16), U (UTF-32), R (raw string), e.g., u8"Hello", R"("Hello, World!")".
+    // These prefixes and suffixes modify the type or value of literals, ensuring correct representation and usage.
+
     // Literal types : u and l combinations for unsigned and long.
     unsigned char unsigned_char{53u}; // 555U would fail because of narrowing
+    // Explicit Declaration and Initialization:
+    // - unsigned char: Explicitly declares the variable as an unsigned character type.
+    // - 53u: The 'u' suffix marks the literal as an unsigned integer, making the code more explicit.
+    // This line initializes the unsigned char variable 'unsigned_char' with the unsigned integer value 53.
 
     // 2 Bytes
     short short_var{-32768};                 //  No special literal type for short)
@@ -37,7 +68,7 @@ int main()
     std::cout << " signed_long_long_int : " << signed_long_long_int << std::endl;
 
     // Narrowing errors
-    // Possible narrowing errors are cought by the braced initializer method.
+    // Possible narrowing errors are caught by the braced initializer method.
     // Assignment and functional don't catch that.
     // unsigned char distance {555u}; //Error [0~255]
     // unsigned int game_score {-20}; //Error
@@ -59,7 +90,7 @@ int main()
     std::cout << "The octal number is : " << octal_number << std::endl;
     //!!BE CAREFUL NOT TO PREFIX YOUR INTEGERS WITH 0 IF YOU MEAN DEC
     int error_octal{055}; // This is not 55 in memory , it is 45 dec
-    std::cout << "The erronous octal number is : " << error_octal << std::endl;
+    std::cout << "The erroneous octal number is : " << error_octal << std::endl;
 
     // Binary literals
     unsigned int binary_literal{0b11111111u}; // 255 dec
