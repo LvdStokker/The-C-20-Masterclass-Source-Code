@@ -51,6 +51,23 @@ int main()
     with the LLP64 data model, which is common on Windows.
     */
 
+    // C++ Integral Types (typical sizes):
+    // - int or signed int: Regular integer, 32 bits (4 bytes).
+    // - short int or short: Short integer, 16 bits (2 bytes).
+    // - long int or long: Long integer, 32 or 64 bits (4 or 8 bytes) depending on the system.
+    // - long long int or long long: Long long integer, at least 64 bits (8 bytes).
+    // - unsigned int: Unsigned regular integer, 32 bits (4 bytes).
+    // - unsigned short int or unsigned short: Unsigned short integer, 16 bits (2 bytes).
+    // - unsigned long int or unsigned long: Unsigned long integer, 32 or 64 bits (4 or 8 bytes) depending on the
+    // system.
+    // - unsigned long long int or unsigned long long: Unsigned long long integer, at least 64 bits (8 bytes).
+    // The exact size and range of these types can vary depending on the compiler and system architecture.
+
+    // In standard C++, the largest integral type for representing mathematical integers is 'long long int' or 'unsigned
+    // long long int',
+    // both of which are guaranteed to be at least 64 bits, or 8 bytes. This is the maximum standard integer type in
+    // terms of byte size.
+
     long long long_long{888}; // 8 Bytes = 64-bit number
     long long int long_long_int{999};
     signed long long signed_long_long{444};
