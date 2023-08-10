@@ -28,12 +28,13 @@ int main()
     // What if I want to show the full hex or octal value according to data type
     int hexWidth = sizeof(data) * 2; // Width for hexadecimal, excluding "0x" prefix
     int octWidth = oct_pos;          // Width for octal, excluding leading "0"
-    std::cout << "data (dec) : " << std::showbase << std::dec << static_cast<unsigned long long int>(data) << std::endl;
-    std::cout << "data (oct) : 0|" << std::noshowbase << std::oct << std::setw(octWidth) << std::setfill('0')
+    std::cout << "data (dec) : " << std::noshowbase << std::dec << static_cast<unsigned long long int>(data)
+              << std::endl;
+    std::cout << "data (oct) : 0|" << std::oct << std::setw(octWidth) << std::setfill('0')
               << static_cast<unsigned long long int>(data) << std::endl; // should show extra 0 with base
     std::cout << "data (hex) : "
-              << "0x"                        // Manually print "0x" prefix
-              << std::noshowbase << std::hex // Suppress automatic "0x" prefix
+              << "0x"     // Manually print "0x" prefix
+              << std::hex // Suppress automatic "0x" prefix
               << std::setw(hexWidth) << std::setfill('0') << static_cast<unsigned long long int>(data) << std::endl;
     std::cout << "data (bin) : 0b" << std::bitset<bits>(static_cast<unsigned long long int>(data)) << std::endl;
 
