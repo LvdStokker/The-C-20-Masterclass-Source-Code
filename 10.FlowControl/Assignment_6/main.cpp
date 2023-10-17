@@ -1,4 +1,4 @@
-// Assignment 5 - Which day?
+// Assignment 6 - Which day?
 #include <iostream>
 
 int main()
